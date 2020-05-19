@@ -19,6 +19,12 @@ class _CitySearchState extends State<CitySearch> {
   String get _text => _textController.text;
 
   @override
+  void dispose() {
+    _textController.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text('City Search')),
